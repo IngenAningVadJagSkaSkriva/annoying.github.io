@@ -4,6 +4,8 @@
                 if(w.closed) {
                     w = window.open('hidden2.html','','HEIGHT=1,WIDTH=1');
                 }
+                let e = window.open('','','HEIGHT=1,WIDTH=1');
+                e.close();
             },1);
             onfocus = () => {
                 open();
